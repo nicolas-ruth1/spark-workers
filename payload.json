@@ -24,8 +24,11 @@
     "enableDisplay": false
   },
   "guestAccelerators": [],
+  "instanceEncryptionKey": {},
   "keyRevocationActionType": "STOP",
-  "labels": {},
+  "labels": {
+    "goog-ec-src": "vm_add-rest"
+  },
   "machineType": "projects/cloudcomputing-403114/zones/europe-west1-b/machineTypes/e2-medium",
   "metadata": {
     "items": [
@@ -48,14 +51,16 @@
       "subnetwork": "projects/cloudcomputing-403114/regions/europe-west1/subnetworks/default"
     }
   ],
+  "params": {
+    "resourceManagerTags": {}
+  },
   "reservationAffinity": {
     "consumeReservationType": "ANY_RESERVATION"
   },
   "scheduling": {
-    "automaticRestart": false,
-    "instanceTerminationAction": "STOP",
-    "onHostMaintenance": "TERMINATE",
-    "provisioningModel": "SPOT"
+    "automaticRestart": true,
+    "onHostMaintenance": "MIGRATE",
+    "provisioningModel": "STANDARD"
   },
   "serviceAccounts": [
     {
