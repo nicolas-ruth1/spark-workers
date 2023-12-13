@@ -58,9 +58,10 @@
     "consumeReservationType": "ANY_RESERVATION"
   },
   "scheduling": {
-    "automaticRestart": true,
-    "onHostMaintenance": "MIGRATE",
-    "provisioningModel": "STANDARD"
+    "automaticRestart": false,
+    "instanceTerminationAction": "STOP",
+    "onHostMaintenance": "TERMINATE",
+    "provisioningModel": "SPOT"
   },
   "serviceAccounts": [
     {
